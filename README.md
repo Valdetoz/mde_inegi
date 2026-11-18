@@ -6,7 +6,7 @@ Plugin de QGIS para descargar y procesar los Modelos Digitales de Elevación (MD
 
 ## Requisitos
 
-- QGIS 3.40 o posterior (también QGIS 4.x)
+- QGIS 3.36 o posterior (también QGIS 4.x)
 - Conexión a internet
 - Una capa de polígonos con el índice de cartas 1:10,000 de INEGI que tenga el campo `cve_carta`
 - Solo cubre el territorio de México
