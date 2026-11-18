@@ -14,6 +14,15 @@ PRIORIDAD_RESOLUCION = ["1.5", "5"]
 PRIORIDAD_FORMATO = ["tif", "bil", "grid", "ascii"]
 SUFIJOS = {"ascii": "as", "bil": "b", "grid": "gr", "tif": "t"}
 BASE_ENLACE = "https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/geografia/imagen_cartografica/1_10_000/lidar/"
+# Abridor de enlaces que solo acepta https (no abre archivos locales ni otros esquemas)
+ABRIDOR = urllib.request.OpenerDirector()
+for manejador in (urllib.request.ProxyHandler(),
+                  urllib.request.HTTPSHandler(),
+                  urllib.request.HTTPRedirectHandler(),
+                  urllib.request.HTTPDefaultErrorHandler(),
+                  urllib.request.HTTPErrorProcessor(),
+                  urllib.request.UnknownHandler()):
+    ABRIDOR.add_handler(manejador)
 
 def armar_enlace(fila, formato):
     carpeta = fila["carpeta"].strip().strip("/")
@@ -90,13 +99,14 @@ def nombre_base(clave, tipo, resolucion):
 
 def descargar_zip(enlace, destino):
     """Devuelve (True, "") si descargó un .zip válido, o (False, motivo)."""
+    if not enlace.lower().startswith("https://"):
+        return False, "enlace no permitido (solo https)"
     try:
-        with urllib.request.urlopen(enlace, timeout=60) as respuesta:
+        with ABRIDOR.open(enlace, timeout=60) as respuesta:
             with open(destino, "wb") as archivo:
                 shutil.copyfileobj(respuesta, archivo)
     except urllib.error.HTTPError as error:
         return False, "HTTP " + str(error.code)
-
     if not zipfile.is_zipfile(destino):
         return False, "no es un .zip"
     return True, ""
