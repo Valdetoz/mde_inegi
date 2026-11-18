@@ -11,9 +11,9 @@ email=valdemar.torres.if@gmail.com
 
 about=Descarga los Modelos Digitales de Elevación (MDE) LiDAR 1:10,000 de INEGI (terreno o superficie) para las cartas seleccionadas en una capa de índice con el campo cve_carta, y los guarda como GeoTIFF comprimido. Incluye una segunda herramienta, "Procesar rásteres", que limpia los márgenes de las cartas y las reproyecta a UTM ITRF2008 en la zona que corresponde a cada clave. Restricciones: solo cubre el territorio de México y necesita conexión a internet para descargar del portal de INEGI.
 
-homepage=https://github.com/TU_USUARIO/mde_inegi
-repository=https://github.com/TU_USUARIO/mde_inegi
-tracker=https://github.com/TU_USUARIO/mde_inegi/issues
+homepage=https://github.com/Valdetoz/mde_inegi
+repository=https://github.com/Valdetoz/mde_inegi
+tracker=https://github.com/Valdetoz/mde_inegi/issues
 
 hasProcessingProvider=no
 changelog=1.2.0 - Compatibilidad con QGIS 4, CSV de cartas compacto
