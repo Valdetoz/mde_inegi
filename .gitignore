@@ -1,0 +1,9 @@
+# Archivos temporales que Python crea solo
+__pycache__/
+*.pyc
+
+# Archivos personales que no se distribuyen
+Control de cantidad de cartas.png
+
+# Paquetes ZIP del plugin (se suben aparte a plugins.qgis.org)
+*.zip
