@@ -4,12 +4,12 @@
 name=MDE de INEGI
 qgisMinimumVersion=3.36
 qgisMaximumVersion=4.99
-description=Descarga y procesa MDE LiDAR 1:10,000 de INEGI a partir de las claves de carta
+description=Downloads and processes INEGI (Mexico) 1:10,000 LiDAR elevation models (DEM) by map sheet key
 version=1.2.0
 author=Valdemar Torres Espinosa
 email=valdemar.torres.if@gmail.com
 
-about=Descarga los Modelos Digitales de Elevación (MDE) LiDAR 1:10,000 de INEGI (terreno o superficie) para las cartas seleccionadas en una capa de índice con el campo cve_carta, y los guarda como GeoTIFF comprimido. Incluye una segunda herramienta, "Procesar rásteres", que limpia los márgenes de las cartas y las reproyecta a UTM ITRF2008 en la zona que corresponde a cada clave. Restricciones: solo cubre el territorio de México y necesita conexión a internet para descargar del portal de INEGI.
+about=Downloads INEGI 1:10,000 LiDAR Digital Elevation Models (terrain or surface) for the map sheets selected in an index layer with the cve_carta field, and saves them as compressed GeoTIFF. A second tool, "Procesar rásteres", cleans the sheet margins and reprojects them to UTM ITRF2008 in the zone given by each sheet key. Restrictions: covers Mexico only and requires an internet connection to download from the INEGI portal. | Español: descarga y procesa los MDE LiDAR 1:10,000 de INEGI por clave de carta. Solo cubre México y requiere internet.
 
 homepage=https://github.com/Valdetoz/mde_inegi
 repository=https://github.com/Valdetoz/mde_inegi
