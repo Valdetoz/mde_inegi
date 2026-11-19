@@ -24,7 +24,8 @@
 from qgis.PyQt.QtCore import QLocale, QTranslator, QCoreApplication
 from qgis.core import QgsSettings
 from qgis.PyQt.QtGui import QIcon
-from qgis.PyQt.QtWidgets import QMenu, QMessageBox, QToolButton
+from qgis.PyQt.QtWidgets import QMenu, QToolButton
+
 try:
     from qgis.PyQt.QtGui import QAction
 except ImportError:
@@ -132,7 +133,7 @@ class CargaMDE:
 
     def run(self):
         """Herramienta 1: descarga de MDE de INEGI."""
-        if self.first_start == True:
+        if self.first_start:
             self.first_start = False
             self.dlg = CargaMDEDialog(self.iface.mainWindow())
 

@@ -16,7 +16,7 @@ class TareaProcesar(QgsTask):
     rasterTerminado = pyqtSignal(str)
 
     def __init__(self, rutas, hacer_limpieza, margen, hacer_warp, resolucion, nodata, respaldar, al_terminar):
-        super(TareaProcesar, self).__init__("Procesar rásteres de INEGI", QgsTask.CanCancel)
+        super(TareaProcesar, self).__init__("Procesar rásteres de INEGI", QgsTask.Flag.CanCancel)
         self.rutas = rutas
         self.hacer_limpieza = hacer_limpieza
         self.margen = margen

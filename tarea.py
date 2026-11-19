@@ -2,11 +2,6 @@
 from qgis.PyQt.QtCore import pyqtSignal
 from qgis.core import QgsTask
 
-try:
-    PUEDE_CANCELAR = QgsTask.Flag.CanCancel
-except AttributeError:
-    PUEDE_CANCELAR = QgsTask.CanCancel
-
 from . import descarga
 
 
@@ -14,7 +9,7 @@ class TareaDescarga(QgsTask):
     cartaTerminada = pyqtSignal(str)
 
     def __init__(self, tabla, claves, tipo, carpeta_salida, al_terminar):
-        super(TareaDescarga, self).__init__("Descarga de MDE INEGI", QgsTask.CanCancel)
+        super(TareaDescarga, self).__init__("Descarga de MDE INEGI", QgsTask.Flag.CanCancel)
         self.tabla = tabla
         self.claves = claves
         self.tipo = tipo
