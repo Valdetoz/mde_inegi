@@ -4,11 +4,7 @@ import os
 from qgis.PyQt.QtCore import pyqtSignal
 from qgis.core import QgsTask
 
-try:
-    PUEDE_CANCELAR = QgsTask.Flag.CanCancel
-except AttributeError:
-    PUEDE_CANCELAR = QgsTask.CanCancel
-    
+
 from . import procesamiento
 
 

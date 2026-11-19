@@ -5,7 +5,7 @@ name=MDE de INEGI
 qgisMinimumVersion=3.36
 qgisMaximumVersion=4.99
 description=Downloads and processes INEGI (Mexico) 1:10,000 LiDAR elevation models (DEM) by map sheet key
-version=1.2.2
+version=1.2.3
 author=Valdemar Torres Espinosa
 email=valdemar.torres.if@gmail.com
 
@@ -16,7 +16,8 @@ repository=https://github.com/Valdetoz/mde_inegi
 tracker=https://github.com/Valdetoz/mde_inegi/issues
 
 hasProcessingProvider=no
-changelog=1.2.2 - Compatibilidad con Qt6 en las tareas en segundo plano
+changelog=1.2.3 - Adecuacion a compatibilidad con Qt6
+    1.2.2 - Compatibilidad con Qt6 en las tareas en segundo plano
     1.2.1 - Descargas restringidas a enlaces https
     1.2.0 - Compatibilidad con QGIS 4, CSV de cartas compacto
     1.0.0 - Primera versión
